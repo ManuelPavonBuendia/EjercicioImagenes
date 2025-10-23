@@ -1,6 +1,5 @@
 # PRACTICA IMAGENES
 ## INDICE
-## INDICE
 - [Diseño](#diseño)
 - [Conversion](#conversion)
   - [IConversor.java](#iconversorjava)
@@ -12,11 +11,20 @@
   - [testArchivoNoExiste()](#testarchivonoexiste)
 
 ## Diseño
+<p>
+<img src="diseño.jpg" alt="diseño">
+</p>
+
+En el diseño tengo 1 clase **Main** y un paquete que llamo **conversion**, dentro del paquete conversor tengo una clase y una interfaz , la clase se llama **Conversor.java** y la interfaz es **IConversor.java**.
+funciona de la siguiente manera:
+1. Desde el **Main** le pasare la ruta de dos imagenes **(la ruta de imagenentrada y la ruta de imagensaldia)**, a la clase conversor.java,
+
+2. La clase Conversor.java que esta dentro del paquete conversion, tiene implentada la interfaz IConversor.java. La clase Conversor.java recibe las rutas de las dos imagenes y ejecutamos el comando **convert** con las dos imagenes y si todo es correcto, el comando generará la imagen con el formato que hemos indicado en imagensalida.
 
 ## Conversion
 Conversion es un paquetes que contiene:
-- IConversor.java: Es una interfaz que define un método para convertir una imagen a otro formato y manejar posibles errores o interrupciones.
-- Conversor.java: Es una clase que implementa IConversor y convierte imágenes usando el comando del sistema convert.
+- **IConversor.java:** Es una interfaz que define un método para convertir una imagen a otro formato y manejar posibles errores o interrupciones.
+- **Conversor.java**: Es una clase que implementa IConversor y convierte imágenes usando el comando del sistema convert.
 
 ### IConversor.java
 ```java
@@ -24,10 +32,10 @@ public interface IConversor {
     void convertirImagen(String imagenentrada, String imagensalida) throws IOException, InterruptedException;
 }
 ```
-La interfaz IConversor sirve como modelo para clases que convierten imágenes.
-Cualquier clase que la implemente debe tener un método convertirImagen que reciba una imagen de entrada que es la que ya tenemos creada y una imagen salida que es la imagen con el nuevo formato.
+La interfaz **IConversor** sirve como modelo para clases que convierten imágenes.
+Cualquier clase que la implemente debe tener un método ``convertirImagen()``que reciba una imagen de entrada que es la que ya tenemos creada y una imagen salida que es la imagen con el nuevo formato.
 
-### Covensor.java
+### Conversor.java
 ```java
 public class Conversor implements IConversor {
 
@@ -96,7 +104,7 @@ File archivoEntrada = new File(imagenentrada);
     }
 
 ```
-Una vez superadas las validaciones, se prepara un array con le comando convert y los dos imagenes(imagenentrada,imagensalida) y se lanza ese proceso
+Una vez superadas las validaciones, se prepara un array con le comando convert y los dos imagenes **(imagenentrada,imagensalida)** y se lanza ese proceso
 ```java
 String[] comando = { "convert", imagenentrada, imagensalida };
 
@@ -108,7 +116,7 @@ String[] comando = { "convert", imagenentrada, imagensalida };
         }
 ```
 
-El programa espera a que termine el proceso usando waitFor(), y si ocurre algún error durante la ejecución, lo captura y muestra el mensaje en la consola de error.
+El programa espera a que termine el proceso usando ``waitFor()``, y si ocurre algún error durante la ejecución, lo captura y muestra el mensaje en la consola de error.
 
 ## Main.java
 ```java
@@ -129,7 +137,7 @@ public class Main {
     }
 }
 ```
-La clase Main contiene el método principal main, Dentro empiezo creando un objeto de la clase Conversor, que utilizare para realizar la conversión de imágenes.
+La clase **Main** contiene el método principal main, Dentro empiezo creando un objeto de la clase **Conversor**, que utilizare para realizar la conversión de imágenes.
 
 
 Primero, comprueba si el usuario ha proporcionado exactamente dos argumentos en la línea de comandos: el nombre del archivo de entrada y el nombre del archivo de salida. Si no se cumplen estas condiciones, se muestra el mensaje de uso en la salida de error.
@@ -151,8 +159,8 @@ try {
         }
 ```
 
-Si durante la conversión ocurre algún problema 
-- como que el archivo de entrada no exista, el formato de salida no sea válido o falle la ejecución del comando convert, la excepción se captura en el bloque catch. En ese caso, se imprime el mensaje de error correspondiente en la consola y se finaliza el programa, indicando un fallo durante la conversión.
+Si durante la conversión ocurre algún problema:
+- **como que el archivo de entrada no exista, el formato de salida no sea válido o falle la ejecución del comando convert**, la excepción se captura en el bloque catch. En ese caso, se imprime el mensaje de error correspondiente en la consola y se finaliza el programa, indicando un fallo durante la conversión.
 
 ## TESTING
 
@@ -178,8 +186,8 @@ void testIntegridadImagenConvertida() throws IOException, InterruptedException {
 ```
 
 Este test verifica que la conversión de una imagen se realice correctamente y que el archivo resultante exista.
-Primero se define una imagen de entrada (IconoJava.png) y una de salida (IconoJava.jpg). Si el archivo de salida ya existe, se elimina para asegurar que la prueba empiece limpia. Luego se llama al método convertirImagen() de la clase conversor.
-Después de la conversión, se agrupan varias verificaciones con assertAll:
+Primero se define una imagen de entrada **(IconoJava.png)** y una de salida **(IconoJava.jpg)**. Si el archivo de salida ya existe, se elimina para asegurar que la prueba empiece limpia. Luego se llama al método ``convertirImagen()`` de la clase conversor.
+Después de la conversión, se agrupan varias verificaciones con **assertAll**:
 
 - Que el archivo de salida realmente exista.
 
@@ -208,7 +216,7 @@ void testFormatoNoValido() {
 ```
 
 Esta prueba evalúa el comportamiento del conversor cuando se intenta convertir una imagen a un formato no permitido.
-Se usa como archivo de salida "salida.md", cuya extensión .md no está en la lista de formatos válidos (solo se aceptan jpg, png, gif y bmp).
+Se usa como archivo de salida **"salida.md"**, cuya extensión .md no está en la lista de formatos válidos **(solo se aceptan jpg, png, gif y bmp)**.
 ```java
 IOException e = assertThrows(IOException.class, () -> {
         conversor.convertirImagen(imagenentrada, imagensalida);
@@ -216,7 +224,7 @@ IOException e = assertThrows(IOException.class, () -> {
 
 assertTrue(e.getMessage().toLowerCase().contains("formato no válido"));
 ```
-El método assertThrows comprueba que el método convertirImagen() lance una excepción del tipo IOException.
+El método **assertThrows** comprueba que el método ``convertirImagen()`` lance una excepción del tipo IOException.
 Luego, se verifica que el mensaje del error contenga la frase “formato no válido”, confirmando que el programa identifica correctamente los formatos no admitidos y responde con un mensaje apropiado.
 
 ### ``testArchivoNoExiste()``
@@ -235,5 +243,7 @@ void testArchivoNoExiste() {
 
 En esta prueba se comprueba que el programa maneje adecuadamente el caso en que el archivo de entrada no existe.
 Se proporciona una ruta de imagen inexistente (NoExiste.png) y su archivo de salida correspondiente (NoExiste.jpg).
-El test usa assertThrows para comprobar que al intentar convertir un archivo inexistente se lanza una excepción IOException.
-Con esto se valida que el método convertirImagen() detecta correctamente cuando el archivo de entrada no está disponible y no intenta ejecutar la conversión.
+El test usa **assertThrows** para comprobar que al intentar convertir un archivo inexistente se lanza una excepción IOException.
+Con esto se valida que el método ``convertirImagen()`` detecta correctamente cuando el archivo de entrada no está disponible y no intenta ejecutar la conversión.
+
+## [Enlace Reposito](https://github.com/ManuelPavonBuendia/PracticaImagenes.git)

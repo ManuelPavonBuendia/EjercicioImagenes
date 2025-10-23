@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.TestJUnit" time="0.159" tests="1" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.TestJUnit" time="0.415" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/usuario/Imágenes/PracticaImagenes/demo/target/surefire/surefirebooter-20251023114733893_3.jar /home/usuario/Imágenes/PracticaImagenes/demo/target/surefire 2025-10-23T11-47-33_690-jvmRun1 surefire-20251023114733893_1tmp surefire_0-20251023114733893_2tmp"/>
+    <property name="sun.java.command" value="/home/usuario/Imágenes/PracticaImagenes/demo/target/surefire/surefirebooter-20251024002525860_3.jar /home/usuario/Imágenes/PracticaImagenes/demo/target/surefire 2025-10-24T00-25-25_661-jvmRun1 surefire-20251024002525860_1tmp surefire_0-20251024002525860_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/usuario/Imágenes/PracticaImagenes/demo/target/test-classes:/home/usuario/Imágenes/PracticaImagenes/demo/target/classes:/home/usuario/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.0/junit-jupiter-5.10.0.jar:/home/usuario/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/home/usuario/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/usuario/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/home/usuario/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/usuario/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.jar:/home/usuario/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/home/usuario/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/home/usuario/.m2/repository/org/mockito/mockito-core/5.11.0/mockito-core-5.11.0.jar:/home/usuario/.m2/repository/net/bytebuddy/byte-buddy/1.14.12/byte-buddy-1.14.12.jar:/home/usuario/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.12/byte-buddy-agent-1.14.12.jar:/home/usuario/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/usuario/.m2/repository/org/mockito/mockito-junit-jupiter/5.11.0/mockito-junit-jupiter-5.11.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -27,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/usuario/Imágenes/PracticaImagenes/demo/target/surefire/surefirebooter-20251023114733893_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/usuario/Imágenes/PracticaImagenes/demo/target/surefire/surefirebooter-20251024002525860_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.16+8-Debian-1deb12u1"/>
     <property name="user.name" value="usuario"/>
@@ -52,52 +52,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testIntegridadImagenConvertida" classname="com.example.TestJUnit" time="0.094">
-    <failure message="Verificación de imagen convertida (2 failures)&#10;	org.opentest4j.AssertionFailedError: La imagen convertida no fue creada ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;&#10;	org.opentest4j.AssertionFailedError: La imagen convertida está vacía ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.MultipleFailuresError"><![CDATA[org.opentest4j.MultipleFailuresError: 
-Verificación de imagen convertida (2 failures)
-	org.opentest4j.AssertionFailedError: La imagen convertida no fue creada ==> expected: <true> but was: <false>
-	org.opentest4j.AssertionFailedError: La imagen convertida está vacía ==> expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
-	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
-	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2957)
-	at com.example.TestJUnit.testIntegridadImagenConvertida(TestJUnit.java:33)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	Suppressed: org.opentest4j.AssertionFailedError: La imagen convertida no fue creada ==> expected: <true> but was: <false>
-		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-		at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-		at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-		at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:210)
-		at com.example.TestJUnit.lambda$0(TestJUnit.java:34)
-		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
-		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
-		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
-		... 6 more
-	Suppressed: org.opentest4j.AssertionFailedError: La imagen convertida está vacía ==> expected: <true> but was: <false>
-		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-		at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-		at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-		at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:210)
-		at com.example.TestJUnit.lambda$1(TestJUnit.java:35)
-		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
-		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
-		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
-		... 6 more
-]]></failure>
-  </testcase>
+  <testcase name="testIntegridadImagenConvertida" classname="com.example.TestJUnit" time="0.296"/>
+  <testcase name="testFormatoNoValido" classname="com.example.TestJUnit" time="0.029"/>
+  <testcase name="testArchivoNoExiste" classname="com.example.TestJUnit" time="0.01"/>
 </testsuite>
