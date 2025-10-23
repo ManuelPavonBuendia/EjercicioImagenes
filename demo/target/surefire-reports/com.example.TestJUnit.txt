@@ -1,0 +1,51 @@
+-------------------------------------------------------------------------------
+Test set: com.example.TestJUnit
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.159 s <<< FAILURE! -- in com.example.TestJUnit
+com.example.TestJUnit.testIntegridadImagenConvertida -- Time elapsed: 0.094 s <<< FAILURE!
+org.opentest4j.MultipleFailuresError: 
+Verificación de imagen convertida (2 failures)
+	org.opentest4j.AssertionFailedError: La imagen convertida no fue creada ==> expected: <true> but was: <false>
+	org.opentest4j.AssertionFailedError: La imagen convertida está vacía ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2957)
+	at com.example.TestJUnit.testIntegridadImagenConvertida(TestJUnit.java:33)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	Suppressed: org.opentest4j.AssertionFailedError: La imagen convertida no fue creada ==> expected: <true> but was: <false>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+		at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+		at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:210)
+		at com.example.TestJUnit.lambda$0(TestJUnit.java:34)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 6 more
+	Suppressed: org.opentest4j.AssertionFailedError: La imagen convertida está vacía ==> expected: <true> but was: <false>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+		at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+		at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:210)
+		at com.example.TestJUnit.lambda$1(TestJUnit.java:35)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 6 more
+
