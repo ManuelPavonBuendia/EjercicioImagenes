@@ -246,4 +246,4 @@ Se proporciona una ruta de imagen inexistente (NoExiste.png) y su archivo de sal
 El test usa **assertThrows** para comprobar que al intentar convertir un archivo inexistente se lanza una excepción IOException.
 Con esto se valida que el método ``convertirImagen()`` detecta correctamente cuando el archivo de entrada no está disponible y no intenta ejecutar la conversión.
 
-## [Enlace Reposito](https://github.com/ManuelPavonBuendia/PracticaImagenes.git)
+## [Enlace Reposito](https://github.com/ManuelPavonBuendia/EjercicioImagenes.git)
