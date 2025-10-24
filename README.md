@@ -248,7 +248,7 @@ El test usa **assertThrows** para comprobar que al intentar convertir un archivo
 Con esto se valida que el método ``convertirImagen()`` detecta correctamente cuando el archivo de entrada no está disponible y no intenta ejecutar la conversión.
 
 ## Ejecución
-Para ejecutar la aplicación lo hago con el comando **java -cp target/classes com.example.Main src/main/java/com/example/IconoJava.png jpg** desde demo.
+Para ejecutar la aplicación lo hago con el comando **java -cp target/classes com.example.Main src/main/java/com/example/IconoJava.png IconoJava.jpg** desde demo.
 la ejecución funciona de la siguiente manera;
 - **cp target/classes** le dice a Java dónde están los .class compilados (Maven los guarda ahí).
 
