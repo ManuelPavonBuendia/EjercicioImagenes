@@ -9,6 +9,7 @@
   - [testIntegridadImagenConvertida()](#testintegridadimagenconvertida)
   - [testFormatoNoValido()](#testformatonovalido)
   - [testArchivoNoExiste()](#testarchivonoexiste)
+- [Ejecución](#ejecución)
 
 ## Diseño
 <p>
@@ -245,5 +246,14 @@ En esta prueba se comprueba que el programa maneje adecuadamente el caso en que 
 Se proporciona una ruta de imagen inexistente (NoExiste.png) y su archivo de salida correspondiente (NoExiste.jpg).
 El test usa **assertThrows** para comprobar que al intentar convertir un archivo inexistente se lanza una excepción IOException.
 Con esto se valida que el método ``convertirImagen()`` detecta correctamente cuando el archivo de entrada no está disponible y no intenta ejecutar la conversión.
+
+## Ejecución
+Para ejecutar la aplicación lo hago con el comando **java -cp target/classes com.example.Main src/main/java/com/example/IconoJava.png jpg** desde demo.
+la ejecución funciona de la siguiente manera;
+- **cp target/classes** le dice a Java dónde están los .class compilados (Maven los guarda ahí).
+
+- **com.example.Main** es el nombre completo de la clase con main, incluyendo su paquete.
+
+- Luego vienen los argumentos que el programa recibe en args[].
 
 ## [Enlace Reposito](https://github.com/ManuelPavonBuendia/EjercicioImagenes.git)
